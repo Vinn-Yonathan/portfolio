@@ -1,28 +1,7 @@
-"use client";
 import DecryptedText from "@/components/ui/DecryptedText";
-import gsap from "gsap";
-import Image from "next/image";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(ScrollTrigger);
+import AboutImageParallax from "./AboutImageParallax";
 
 export default function AboutSection() {
-  useGSAP(() => {
-    gsap.from(".about-image", {
-      scrollTrigger: {
-        trigger: "#about-section",
-        start: "12% 40%",
-        end: "12% 45",
-        scrub: true,
-        // markers: true,
-      },
-      opacity: 0,
-      x: 100,
-      ease: "power2.out",
-      duration: 1,
-    });
-  });
   return (
     <section
       id="about-section"
@@ -51,13 +30,7 @@ export default function AboutSection() {
           </svg>
         </div>
 
-        <Image
-          src="/cevin-grayscale.png"
-          alt="Cevin Albert Yonathan Potrait in Grayscale"
-          className="about-image opacity-20 pl-12 pb-2 md:w-97 md:h-84 xl:w-138.75 xl:h-119.5 md:pl-0 md:pb-6"
-          width={355}
-          height={311}
-        />
+        <AboutImageParallax />
       </div>
 
       <p className="text-right md:w-[60%] md:ml-auto">

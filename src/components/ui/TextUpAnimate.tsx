@@ -32,7 +32,7 @@ export default function TextUpAnimate({
           start: start,
           end: end,
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
         y: y,
         opacity: 0,
