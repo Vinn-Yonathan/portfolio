@@ -23,7 +23,7 @@ export default function AboutImageParallax() {
         start: "center+=100 bottom",
         end: "bottom top",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
       y: 150,
     });

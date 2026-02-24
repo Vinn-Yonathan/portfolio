@@ -15,13 +15,13 @@ export default function Navbar() {
         scrub: true,
         // markers: true,
       },
-      backdropFilter: "blur(1px)",
+      backdropFilter: "blur(3px)",
       ease: "power2.out",
       duration: 1,
     });
   });
   return (
-    <nav className="nav w-full fixed ">
+    <nav className="nav w-full fixed z-30">
       <ul className="font-ubuntu-mono flex justify-center items-center gap-x-10 md:gap-x-14 xl:gap-x-35 py-6 text-xl ">
         <a href="#about-section">ABOUT</a>
         <a href="#">SKILLS</a>
