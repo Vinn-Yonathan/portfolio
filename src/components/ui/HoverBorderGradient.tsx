@@ -11,7 +11,7 @@ export function HoverBorderGradient({
   children,
   containerClassName,
   className,
-  as: Tag = "button",
+  as,
   duration = 1,
   clockwise = true,
   ...props
@@ -26,6 +26,9 @@ export function HoverBorderGradient({
 >) {
   const [hovered, setHovered] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>("TOP");
+  const TagComponent = (as || "button") as React.ComponentType<
+    React.HTMLAttributes<HTMLElement> & { className?: string }
+  >;
 
   const rotateDirection = (currentDirection: Direction): Direction => {
     const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
@@ -57,7 +60,7 @@ export function HoverBorderGradient({
     }
   }, [hovered]);
   return (
-    <Tag
+    <TagComponent
       onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
         setHovered(true);
       }}
@@ -120,7 +123,7 @@ export function HoverBorderGradient({
         className="z-1 flex-none absolute inset-0.5 rounded-xl"
       />
       {/* <div className="bg-background absolute z-1 flex-none inset-0.5 rounded-lg" /> */}
-    </Tag>
+    </TagComponent>
   );
 }
 
