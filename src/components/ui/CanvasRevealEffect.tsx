@@ -198,7 +198,7 @@ const ShaderMaterial = ({
   useFrame((clock) => {
     if (!ref.current) return;
     const timestamp = clock.elapsed;
-    if (timestamp - lastFrameTime < 1 / maxFps) {
+    if (timestamp - lastFrameTime.current < 1 / maxFps) {
       return;
     }
     lastFrameTime.current = timestamp;
@@ -279,7 +279,7 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
-  }, [size.width, size.height, source]);
+  }, [size.width, size.height, source, getUniforms]);
 
   return (
     <mesh ref={ref as any}>
