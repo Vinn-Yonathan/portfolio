@@ -24,8 +24,8 @@ export default function Navbar() {
     <nav className="nav w-full fixed z-30">
       <ul className="font-ubuntu-mono flex justify-center items-center gap-x-10 md:gap-x-14 xl:gap-x-35 py-6 text-xl ">
         <a href="#about-section">ABOUT</a>
-        <a href="#">SKILLS</a>
-        <a href="#">PROJECTS</a>
+        <a href="#skill-section">SKILLS</a>
+        <a href="#project-section">PROJECTS</a>
       </ul>
     </nav>
   );
