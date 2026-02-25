@@ -28,7 +28,7 @@ export default function SkillSection() {
   return (
     <section
       id="skill-section"
-      className="min-h-screen font-ubuntu-mono font-semibold text-foreground px-12 md:px-20 xl:px-32 py-16 space-y-12 md:space-y-24 xl:space-y-34"
+      className="min-h-screen font-ubuntu-mono font-semibold text-foreground px-12 md:px-20 xl:px-32 pt-20 space-y-12 md:space-y-24 xl:space-y-34"
     >
       <TextUpAnimate
         text="here are the skills that i comfortable to work with"
