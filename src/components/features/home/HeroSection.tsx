@@ -1,7 +1,6 @@
 import DecryptedText from "@/components/ui/DecryptedText";
 import { HoverBorderGradient } from "@/components/ui/HoverBorderGradient";
 import SocialIcons from "@/components/ui/SocialIcons";
-import { button } from "motion/react-client";
 
 export default function HeroSection() {
   return (
@@ -45,9 +44,11 @@ export default function HeroSection() {
       <HoverBorderGradient
         className=" text-xl md:text-2xl xl:text-[1.6rem] font-ubuntu-mono font-semibold hover:font-bold text-foreground bg-transparent"
         containerClassName="px-[1em] xl:py-[0.25em] xl:px-[3em]"
-        as={button}
+        as="div"
       >
-        Resume
+        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+          Resume
+        </a>
       </HoverBorderGradient>
     </section>
   );
